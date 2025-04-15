@@ -530,15 +530,35 @@
       </div>
       
       <div class="contact">
-        <a href="mailto:p3paulo.rezende@gmail.com">p3paulo.rezende@gmail.com</a>
+        <a href="mailto:p3paulo.rezende@gmail.com">Send a e-mail</a>
         <a href="https://github.com/login12" target="_blank">github.com/login12</a>
       </div>
     </div>
   </div>
 
-<audio autoplay loop>
-  <source src="terror.mp3" type="audio/mpeg">
-  Seu navegador não suporta o elemento de áudio.
-</audio>
+<audio id="audioMacabro" src="terror.mp3" preload="auto"></audio>
+
+<script>
+  // Tenta tocar o som assim que possível
+  window.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('audioMacabro');
+
+    // Tenta tocar o som
+    const playAudio = () => {
+      audio.play().then(() => {
+        console.log("🎵 Som tocando");
+      }).catch(() => {
+        console.warn("🚫 Autoplay bloqueado. Tocará após um clique.");
+        // Se não conseguir, espera o primeiro clique
+        document.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    };
+
+    playAudio();
+  });
+</script>
+
 </body>
 </html>
