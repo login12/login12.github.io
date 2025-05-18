@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedro Rezende</title>
+  <title>Apresentação, Pedro Rezende</title>
   <style>
     /* Reset and base styles */
     * {
@@ -513,15 +513,19 @@
       <div class="title">bad programmer & enthusiast</div>
       
       <div class="skills">
-        <span class="skill">entrepreneur</span>
-        <span class="skill">C, C# hater</span>
-        <span class="skill">shhhh?</span>
-        <span class="skill">C++</span>
-        <span class="skill">Music lover</span>
-        <span class="skill">linux abuser</span>
-        <span class="skill">yellowspace owner</span>
-        <span class="skill">hpstore owner</span>
-        <span class="skill">kotasIA owner</span>
+        <span class="skill">JavaScript (Advanced)</span>
+        <span class="skill">Lua Wizard 🧙</span>
+        <span class="skill">c, c# (Mastered, not loved)</span>
+        <span class="skill">Advanced Logic</span>
+        <span class="skill">HTML5/CSS3 Lover</span>
+        <span class="skill">API Specialist</span>
+        <span class="skill">MySQL, Redis, Supabase</span>
+        <span class="skill">C++ (Just because)</span>
+        <span class="skill">Music lover 🎧</span>
+        <span class="skill">Linux Deploy</span>
+        <span class="skill">Yellowspace founder</span>
+        <span class="skill">Lumi founder</span>
+        <span class="skill">Kotas founder</span>
       </div>
       
       <div class="command-prompt">
@@ -539,17 +543,12 @@
 <audio id="audioMacabro" src="terror.mp3" preload="auto"></audio>
 
 <script>
-  // Tenta tocar o som assim que possível
   window.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('audioMacabro');
-
-    // Tenta tocar o som
     const playAudio = () => {
       audio.play().then(() => {
         console.log("🎵 Som tocando");
       }).catch(() => {
-        console.warn("🚫 Autoplay bloqueado. Tocará após um clique.");
-        // Se não conseguir, espera o primeiro clique
         document.addEventListener('click', () => {
           audio.play();
         }, { once: true });
